@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud App | Add Page</title>
+    <style>
+        input{
+            width: 60%;
+            padding: 10px;
+            margin-left: 10px;
+        }
+        label{
+            display: inline-block;
+            width: 30%;
+        }
+        button{
+            width: 30%;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Add Record in Data Base</h1>
+    <a href="/">Home</a>
+    <form method="post">
+        {% csrf_token %}
+        <label>Book title</label>
+        <input type="title" name="title" placeholder="Enter Book Title Name">
+        <label>Author</label>
+        <input type="author" name="author" placeholder="Enter Book Author">
+        <label>Publisher</label>
+        <input type="publisher" name="publisher" placeholder="Enter Book publisher">
+        <label>Privilege</label>
+        <input type="privilege" name="privilege" placeholder="Enter Book privilege">
+        <label>State</label>
+        <input type="text" name="state" placeholder="Enter Book state">
+        <button type="submit">Add</button>
+    </form>
+</body>
+</html>

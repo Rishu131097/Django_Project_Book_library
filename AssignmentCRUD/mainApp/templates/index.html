@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+</head>
+<body>
+    <h1>This is Home page</h1> 
+    <a href="/add/">Add Record</a>
+    <table border="1px" cellpadding="20px">
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Publisher</th>
+            <th>Privilege</th>
+            <th>State</th>
+            <th></th>
+            <th></th>
+
+        </tr>
+        {% for i in Data %}
+        <tr>
+            <td>{{i.id}} </td>
+            <td>{{i.title}} </td>
+            <td>{{i.author}} </td>
+            <td>{{i.publisher}} </td>
+            <td>{{i.privilege}} </td>
+            <td>{{i.state}} </td>
+            <td><a href="/update/{{i.id}}">Update</a></td>
+            <td><a href="/delete/{{i.id}}">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
